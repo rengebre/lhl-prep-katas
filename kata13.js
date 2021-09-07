@@ -1,3 +1,4 @@
+//Object to convert numbered month to named month
 const numbersToDates = {
   "01": "January",
   "02": "February",
@@ -21,7 +22,11 @@ const talkingCalendar = function(date) {
   let dayOrdinals;
 
   // remove leading 0 on the numbered day
-  day = day.replace("0", "");
+  // day = day.replace("0", ""); -> oopsies, made mistake here, replaces all 0's, this was originally entered as my solution
+  // New solution:
+  if (day[0] === '0') {
+    day = day[1];
+  }
 
   // determine the Ordinal on the day
   if (day === "1" || day === "21" || day === "31") {
@@ -38,5 +43,5 @@ const talkingCalendar = function(date) {
 };
 
 console.log(talkingCalendar("2017/12/02"));
-console.log(talkingCalendar("2007/11/11"));
+console.log(talkingCalendar("2007/11/07"));
 console.log(talkingCalendar("1987/08/24"));

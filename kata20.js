@@ -22,10 +22,12 @@ const blocksAway = function(directions) {
   let returnObject = {};
 
   for (let i = 0; i < directions.length; i += 2) {
+    // check starting orientation -> this needs clarity in the problem description
     if (i === 0 && directions[i] === 'left') {
       currentDirection = 'east';
     }
 
+    // change direction based on previous state and requested change
     currentDirection = directionNavigation[currentDirection[0] + directions[i][0]];
     if (currentDirection === 'east' || currentDirection === 'west') {
       currentLocation[0] += directions[i + 1] * directionMultiplyer[currentDirection];

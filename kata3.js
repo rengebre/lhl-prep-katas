@@ -8,6 +8,7 @@ const numberOfVowels = function(data) {
     for (let char of vowelString) {
       if (elem === char) {
         vowelCount += 1;
+        break;
       }
     }
   }

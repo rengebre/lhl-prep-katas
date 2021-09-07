@@ -19,8 +19,8 @@ const queenThreat = function(board) {
   // Find the the coordinates of each node (value of 1) and push them into row/column arrays
   let nodeRow = [];
   let nodeCol = [];
-  for (let i = 0; i < generatedBoard.length; i++) {
-    let rowSum = generatedBoard[i].reduce(function (total, current, index) { 
+  for (let i = 0; i < board.length; i++) {
+    let rowSum = board[i].reduce(function (total, current, index) { 
       if (current > 0) {nodeCol.push(index);} 
       return total + current;}, 0);
     
@@ -47,8 +47,8 @@ const queenThreat = function(board) {
   }
 }
 
-let whiteQueen = [0, 0];
-let blackQueen = [5, 7];
+let whiteQueen = [0, 5];
+let blackQueen = [5, 0];
 let generatedBoard = generateBoard(whiteQueen, blackQueen);
 console.log(generatedBoard);
 console.log(queenThreat(generatedBoard));

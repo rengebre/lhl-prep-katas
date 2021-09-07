@@ -13,7 +13,7 @@ let randomNumber;
 let maxInput;
 let minInput;
 
-// while loop to set the range for the random integer 
+// while loop to prompt the user to set the range for the random integer 
 while (true) {
   console.log("lets set up our random number range!")
   maxInput = prompt("Please enter the maximum range integer: ")

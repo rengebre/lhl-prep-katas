@@ -1,6 +1,6 @@
 const repeatNumbers = function(data) {
   let returnString = "";
-  for (let i = 0; i < data.length; i ++) {
+  for (let i = 0; i < data.length; i++) {
     for (let j = 0; j < data[i][1]; j++) {
       returnString += String(data[i][0]);
     }
